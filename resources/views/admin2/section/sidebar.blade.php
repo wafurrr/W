@@ -4,7 +4,7 @@
         <div class="leftside-navigation">
             <ul class="sidebar-menu" id="nav-accordion">
                 <li>
-                    <a class="active" href="{{url('beranda')}}">
+                    <a class="active" href="{{url('admin/beranda')}}">
                         <i class="fa fa-home"></i>
                         <span>Beranda</span>
                     </a>
@@ -21,21 +21,21 @@
                     </ul>
                 </li>
                 <li>
-                    <a class="active" href="{{url('produk')}}">
+                    <a class="active" href="{{url('admin/produk')}}">
                         <i class="fa fa-th"></i>
                         <span>Produk</span>
                     </a>
                 </li>
                 <li>
-                    <a class="active" href="{{url('kategori')}}">
+                    <a class="active" href="{{url('admin/kategori')}}">
                         <i class="fa fa-th"></i>
                         <span>Kategori</span>
                     </a>
                 </li>
                 <li>
-                    <a class="active" href="{{url('promo')}}">
+                    <a class="active" href="{{url('admin/user')}}">
                         <i class="fa fa-th"></i>
-                        <span>Promo</span>
+                        <span>User</span>
                     </a>
                 </li>
                 <li>

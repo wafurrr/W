@@ -41,6 +41,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 @include('admin2.section.sidebar')
 <!--sidebar end-->
 <!--main content start-->
+@include('admin2.utils.notif')
 @yield('content')
  <!-- footer -->
 @include('admin2.section.footer')

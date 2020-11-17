@@ -7,34 +7,34 @@
 			<div class="col-md-12 mt-5">
 				<div class="card">
 					<div class="card-header">
-						Data Produk
-						<a href="{{url('admin/produk/create')}}" class="btn btn-dark float-right"><i class="fa fa-plus"></i> Tambah Data</a>
+						Data User
+						<a href="{{url('admin/user/create')}}" class="btn btn-dark float-right"><i class="fa fa-plus"></i> Tambah Data</a>
 					</div>
 					<div class="card-body">
 						<table class="table">
 							<thead>
 								<th>No</th>
+								<th>Username</th>
 								<th>Nama</th>
-								<th>Harga</th>
-								<th>Stok</th>
+								<th>Email</th>
 								<th>Aksi</th>
 							</thead>
 							<tbody>
-								@foreach($list_produk as $produk)
+								@foreach($list_user as $user)
 								<tr>
 									<td>{{$loop->iteration}}</td>
-									<td>{{$produk->nama}}</td>
-									<td>{{$produk->harga}}</td>
-									<td>{{$produk->stok}}</td>
+									<td>{{$user->username}}</td>
+									<td>{{$user->nama}}</td>
+									<td>{{$user->email}}</td>
 									<td width="20px">
 										<div class="btn-group">
-											<a href="{{url('admin/produk', $produk->id)}}" class="btn btn-dark"><i class="fa fa-info"></i></a>
+											<a href="{{url('admin/user', $user->id)}}" class="btn btn-dark"><i class="fa fa-info"></i></a>
 										</td>
 										<td width="20px">
-											<a href="{{url('admin/produk', $produk->id)}}/edit" class="btn btn-warning"><i class="fa fa-edit"></i></a>
+											<a href="{{url('admin/user', $user->id)}}/edit" class="btn btn-warning"><i class="fa fa-edit"></i></a>
 										</td>
 										<td width="20px"> 
-											@include('admin2.utils.delete', ['url' => url('admin/produk', $produk->id)])
+											@include('admin2.utils.delete', ['url' => url('admin/user', $user->id)])
 										</td>
 								</tr>
 								@endforeach
