@@ -19,7 +19,7 @@ class AuthController extends Controller
 
 	function logout(){
 		Auth::logout();
-		return redirect('beranda');
+		return redirect('base');
 	}
 
 	function registrasi(){

@@ -78,6 +78,11 @@ Route::prefix('admin')->group(function(){
 });
 
 Route::prefix('admin')->group(function(){
+    Route::post('produk/filter', [ProdukController::class, 'filter']);
+
+});
+
+Route::prefix('admin')->group(function(){
 Route::get('user', [UserController::class, 'index']);
 Route::get('user/create', [UserController::class, 'create']);
 Route::post('user', [UserController::class, 'store']);
@@ -87,3 +92,7 @@ Route::put('user/{user}', [UserController::class, 'update']);
 Route::delete('user/{user}', [UserController::class, 'destroy']);
 
 });
+
+Route::get('login', [AuthController::class, 'showLogin']);
+Route::post('login', [AuthController::class, 'loginProcess']);
+Route::get('logout', [AuthController::class, 'logout']);

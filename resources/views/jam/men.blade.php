@@ -255,41 +255,39 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
    <div class="men">
     <div class="container">
     	<div class="col-md-4 sidebar_men">
-    	  <h3>Categories</h3>
-    	  <ul class="product-categories color"><li class="cat-item cat-item-42"><a href="#">Dresses</a> <span class="count">(14)</span></li>
-			<li class="cat-item cat-item-60"><a href="#">Glasses</a> <span class="count">(2)</span></li>
-			<li class="cat-item cat-item-63"><a href="#">Gloves</a> <span class="count">(2)</span></li>
-			<li class="cat-item cat-item-54"><a href="#">Jeans</a> <span class="count">(8)</span></li>
-			<li class="cat-item cat-item-55"><a href="#">Shoes</a> <span class="count">(11)</span></li>
-			<li class="cat-item cat-item-64"><a href="#">Shorts</a> <span class="count">(3)</span></li>
-			<li class="cat-item cat-item-61"><a href="#">Skirts</a> <span class="count">(3)</span></li>
-			<li class="cat-item cat-item-56"><a href="#">Sweaters</a> <span class="count">(6)</span></li>
-			<li class="cat-item cat-item-57"><a href="#">T-Shirts</a> <span class="count">(13)</span></li>
-			<li class="cat-item cat-item-58"><a href="#">Tops</a> <span class="count">(7)</span></li>
-			<li class="cat-item cat-item-62"><a href="#">Watchers</a> <span class="count">(2)</span></li>
-			<li class="cat-item cat-item-41"><a href="#">Women</a> <span class="count">(17)</span></li>
-		 </ul>
-		  <h3>Colors</h3>
-    	  <ul class="product-categories color"><li class="cat-item cat-item-42"><a href="#">Green</a> <span class="count">(14)</span></li>
-			<li class="cat-item cat-item-60"><a href="#">Blue</a> <span class="count">(2)</span></li>
-			<li class="cat-item cat-item-63"><a href="#">Red</a> <span class="count">(2)</span></li>
-			<li class="cat-item cat-item-54"><a href="#">Gray</a> <span class="count">(8)</span></li>
-			<li class="cat-item cat-item-55"><a href="#">Green</a> <span class="count">(11)</span></li>
-		  </ul>
-		  <h3>Sizes</h3>
-    	  <ul class="product-categories color"><li class="cat-item cat-item-42"><a href="#">L</a> <span class="count">(14)</span></li>
-			<li class="cat-item cat-item-60"><a href="#">M</a> <span class="count">(2)</span></li>
-			<li class="cat-item cat-item-63"><a href="#">S</a> <span class="count">(2)</span></li>
-			<li class="cat-item cat-item-54"><a href="#">XL</a> <span class="count">(8)</span></li>
-			<li class="cat-item cat-item-55"><a href="#">XS</a> <span class="count">(11)</span></li>
-		  </ul>
-		  <h3>Price</h3>
-    	  <ul class="product-categories"><li class="cat-item cat-item-42"><a href="#">200$-300$</a> <span class="count">(14)</span></li>
-			<li class="cat-item cat-item-60"><a href="#">300$-400$</a> <span class="count">(2)</span></li>
-			<li class="cat-item cat-item-63"><a href="#">400$-500$</a> <span class="count">(2)</span></li>
-			<li class="cat-item cat-item-54"><a href="#">500$-600$</a> <span class="count">(8)</span></li>
-			<li class="cat-item cat-item-55"><a href="#">600$-700$</a> <span class="count">(11)</span></li>
-		  </ul>
+    	  <div class="card">
+					<div class="card-header">
+						Filter
+					</div>
+					<div class="card-body">
+						<form action="{{url('admin/produk/filter')}}" method="post">
+							@csrf
+							<div class="form-grup">
+								<label for="" class="control-label">Nama</label>
+								<input type="text" class="form-control" name="nama" value="{{$nama ?? ""}}">
+							</div>
+							<div class="form-grup">
+								<label for="" class="control-label">Stok</label>
+								<input type="text" class="form-control" name="stok" value="{{$stok ?? ""}}">
+							</div>
+							<div class="row">
+								.<div class="col-md-6">
+									<div class="form-grup">
+									<label for="" class="control-label">Harga Min</label>
+									<input type="text" class="form-control" name="harga_min" value="{{$harga_min ?? ""}}">
+									</div>
+								</div>	
+								<div class="col-md-5">
+									<div class="form-grup">
+									<label for="" class="control-label">Harga Max</label>
+									<input type="text" class="form-control" name="harga_max" value="{{$harga_max ?? ""}}">
+									</div>
+								</div>	
+							</div>
+							<button class="btn btn-dark float-right"><i class="fa fa-search"></i>Filter</button>
+						</form>
+					</div>
+				</div>
 		</div>
     	<div class="col-md-8 mens_right">
     		<div class="dreamcrub">

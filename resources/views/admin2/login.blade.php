@@ -38,9 +38,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<span><input type="checkbox" />Remember Me</span>
 			<h6><a href="#">Forgot Password?</a></h6>
 				<div class="clearfix"></div>
-				<input type="submit" value="Sign In" name="login">
+				<input type="submit" name="login">
 		</form>
-		<p>Don't Have an Account ?<a href="registration.html">Create an account</a></p>
+		<p>Don't Have an Account ?<a href="register">Create an account</a></p>
 </div>
 </div>
 <script src="js/bootstrap.js"></script>
